@@ -1,438 +1,109 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hausordnung | SH Holidays Ltd. – Sozopol</title>
-  <meta name="description" content="Hausordnung der Wohnanlage SH Holidays Ltd. in Sozopol, Kalfata 38, Bulgarien." />
-  <meta name="robots" content="index,follow" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Allgemeine Geschäftsbedingungen | SH Holidays &amp; Health Ltd.</title>
   <style>
-    :root {
-      --bg: #f5f7fb;
-      --card: #ffffff;
-      --text: #213042;
-      --muted: #5c6b7c;
-      --line: #dfe6ee;
-      --accent: #1a6fb0;
-      --accent-dark: #0e4d7f;
-      --soft: #eaf4fb;
-      --shadow: 0 18px 40px rgba(24, 44, 72, 0.08);
-      --radius: 22px;
-      --max: 1180px;
-    }
-
+    :root { --bg:#f7f4ed; --paper:#fff; --text:#253238; --muted:#66737a; --accent:#1f6f8b; --line:#e4ded3; }
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at top right, rgba(26,111,176,0.08), transparent 28%),
-        linear-gradient(180deg, #f9fbfe 0%, var(--bg) 100%);
-      line-height: 1.6;
-    }
-
-    .wrap {
-      width: min(var(--max), calc(100% - 32px));
-      margin: 0 auto;
-    }
-
-    .hero {
-      padding: 48px 0 26px;
-    }
-
-    .hero-card {
-      background: linear-gradient(135deg, rgba(26,111,176,0.98), rgba(14,77,127,0.96));
-      color: #fff;
-      border-radius: 32px;
-      padding: 42px 34px;
-      box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-card::after {
-      content: "";
-      position: absolute;
-      inset: auto -60px -60px auto;
-      width: 240px;
-      height: 240px;
-      background: radial-gradient(circle, rgba(255,255,255,0.18), rgba(255,255,255,0));
-      border-radius: 50%;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      background: rgba(255,255,255,0.14);
-      color: #fff;
-      border: 1px solid rgba(255,255,255,0.18);
-      border-radius: 999px;
-      padding: 7px 14px;
-      font-size: 0.92rem;
-      margin-bottom: 16px;
-    }
-
-    h1 {
-      margin: 0 0 12px;
-      font-size: clamp(2rem, 4vw, 3.4rem);
-      line-height: 1.08;
-      letter-spacing: -0.02em;
-    }
-
-    .lead {
-      max-width: 780px;
-      font-size: 1.05rem;
-      color: rgba(255,255,255,0.92);
-      margin: 0 0 24px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 24px;
-    }
-
-    .info-pill {
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 18px;
-      padding: 16px 18px;
-    }
-
-    .info-pill strong {
-      display: block;
-      font-size: 0.9rem;
-      margin-bottom: 4px;
-      opacity: 0.95;
-    }
-
-    .quick-nav {
-      padding: 8px 0 8px;
-    }
-
-    .nav-card {
-      background: var(--card);
-      border-radius: 22px;
-      box-shadow: var(--shadow);
-      padding: 18px;
-      border: 1px solid var(--line);
-    }
-
-    .nav-title {
-      margin: 0 0 12px;
-      font-size: 1rem;
-      color: var(--accent-dark);
-    }
-
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: var(--accent-dark);
-      background: var(--soft);
-      border: 1px solid #cfe2f2;
-      padding: 8px 12px;
-      border-radius: 999px;
-      font-size: 0.95rem;
-    }
-
-    .content {
-      padding: 18px 0 52px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 24px 22px;
-    }
-
-    .card h2 {
-      margin: 0 0 12px;
-      font-size: 1.18rem;
-      color: var(--accent-dark);
-      line-height: 1.3;
-    }
-
-    .card p,
-    .card li {
-      color: var(--text);
-      font-size: 0.98rem;
-    }
-
-    .card ul {
-      margin: 0;
-      padding-left: 18px;
-    }
-
-    .muted {
-      color: var(--muted);
-    }
-
-    .full {
-      grid-column: 1 / -1;
-    }
-
-    .footer {
-      padding: 0 0 42px;
-    }
-
-    .footer-card {
-      background: #fff;
-      border-radius: 24px;
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-      padding: 24px 22px;
-      text-align: center;
-    }
-
-    .footer-card p {
-      margin: 8px 0;
-      color: var(--muted);
-    }
-
-    .footer-card strong {
-      color: var(--accent-dark);
-    }
-
-    @media (max-width: 900px) {
-      .hero-grid,
-      .grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .hero {
-        padding-top: 20px;
-      }
-
-      .hero-card {
-        padding: 28px 20px;
-        border-radius: 24px;
-      }
-
-      .nav-card,
-      .card,
-      .footer-card {
-        border-radius: 18px;
-        padding: 20px 18px;
-      }
-
-      .wrap {
-        width: min(var(--max), calc(100% - 20px));
-      }
-    }
-
-    @media print {
-      body {
-        background: #fff;
-      }
-      .hero-card,
-      .nav-card,
-      .card,
-      .footer-card {
-        box-shadow: none;
-      }
-      .quick-nav {
-        display: none;
-      }
-      .content,
-      .footer,
-      .hero {
-        padding: 0;
-      }
-    }
+    body { margin:0; font-family:Arial, Helvetica, sans-serif; background:var(--bg); color:var(--text); line-height:1.65; font-size:17px; }
+    header { background:linear-gradient(135deg,#0f4c5c,#1f6f8b); color:white; padding:48px 20px; text-align:center; }
+    header h1 { margin:0 0 10px; font-size:34px; line-height:1.2; }
+    header p { margin:6px 0; font-size:17px; opacity:.95; }
+    main { max-width:920px; margin:32px auto; padding:0 18px; }
+    .card { background:var(--paper); border:1px solid var(--line); border-radius:14px; padding:34px; box-shadow:0 10px 28px rgba(0,0,0,.06); }
+    .notice { background:#eef7fa; border-left:5px solid var(--accent); padding:14px 16px; margin:0 0 28px; color:#23434f; border-radius:8px; }
+    h2 { font-size:22px; margin:34px 0 10px; padding-top:6px; color:#163f4b; border-top:1px solid var(--line); }
+    h2:first-of-type { border-top:0; margin-top:8px; }
+    p { margin:0 0 14px; }
+    ul { margin:8px 0 16px 24px; padding:0; }
+    li { margin:4px 0; }
+    .company { margin-top:28px; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); }
+    .back { display:inline-block; margin-top:28px; padding:12px 18px; background:var(--accent); color:white; text-decoration:none; border-radius:999px; font-weight:bold; }
+    footer { text-align:center; color:var(--muted); padding:28px 18px 42px; font-size:14px; }
+    @media (max-width:640px){ body{font-size:16px;} header{padding:34px 16px;} header h1{font-size:28px;} .card{padding:24px 18px;} h2{font-size:20px;} }
   </style>
 </head>
 <body>
-  <header class="hero">
-    <div class="wrap">
-      <div class="hero-card">
-        <span class="eyebrow">SH Holidays Ltd. · Sozopol</span>
-        <h1>Hausordnung</h1>
-        <p class="lead">
-          Herzlich willkommen in der Wohnanlage SH Holidays Ltd. in Sozopol. Damit sich alle Gäste wohlfühlen,
-          bitten wir um Beachtung der folgenden Hinweise für ein angenehmes, erholsames und respektvolles Miteinander.
-        </p>
-        <div class="hero-grid">
-          <div class="info-pill">
-            <strong>Standort</strong>
-            Kalfata 38, 8130 Sozopol, Bulgarien
-          </div>
-          <div class="info-pill">
-            <strong>Nachtruhe</strong>
-            22:00–08:00 Uhr
-          </div>
-          <div class="info-pill">
-            <strong>Gültigkeit</strong>
-            anno Domini 2026
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+<header>
+  <h1>Allgemeine Geschäftsbedingungen (AGB)</h1>
+  <p><strong>SH Holidays &amp; Health Ltd.</strong></p>
+  <p>Kalfata 38, 8130 Sozopol, Bulgarien</p>
+  <p>Stand: Mai 2026</p>
+</header>
+<main>
+<section class="card">
+<div class="notice">Diese Allgemeinen Geschäftsbedingungen gelten für Buchungen und Aufenthalte in den von SH Holidays &amp; Health Ltd. angebotenen Ferienwohnungen und Unterkünften.</div>
 
-  <section class="quick-nav">
-    <div class="wrap">
-      <div class="nav-card">
-        <h2 class="nav-title">Schnellübersicht</h2>
-        <div class="nav-links">
-          <a href="#respekt">Respekt</a>
-          <a href="#ruhe">Ruhezeiten</a>
-          <a href="#apartments">Apartments</a>
-          <a href="#pool">Pool</a>
-          <a href="#balkon">Balkon</a>
-          <a href="#sauberkeit">Sauberkeit</a>
-          <a href="#rauchen">Rauchen</a>
-          <a href="#tiere">Tiere</a>
-          <a href="#sicherheit">Sicherheit</a>
-          <a href="#abreise">Abreise</a>
-        </div>
-      </div>
-    </div>
-  </section>
+<h2>1. Geltungsbereich</h2>
+<p>Diese Allgemeinen Geschäftsbedingungen gelten für sämtliche Buchungen, Reservierungen und Aufenthalte in den von SH Holidays &amp; Health Ltd. angebotenen Ferienwohnungen und Unterkünften, sofern nicht ausdrücklich schriftlich etwas anderes vereinbart wurde.</p>
+<p>Mit einer Buchung – unabhängig davon, ob diese über die Website, per E-Mail, telefonisch oder über Buchungsplattformen erfolgt – erkennt der Gast diese AGB an.</p>
 
-  <main class="content">
-    <div class="wrap">
-      <div class="grid">
-        <section class="card" id="respekt">
-          <h2>1. Rücksicht und gegenseitiger Respekt</h2>
-          <p>Bitte verhalten Sie sich gegenüber anderen Gästen, Eigentümern, Nachbarn und Mitarbeitern respektvoll und rücksichtsvoll.</p>
-          <ul>
-            <li>unnötigen Lärm vermeiden</li>
-            <li>Gemeinschaftsflächen sauber halten</li>
-            <li>Privatsphäre anderer Gäste achten</li>
-          </ul>
-        </section>
+<h2>2. Vertragsschluss</h2>
+<p>Die Darstellung der Unterkünfte auf der Website oder in sonstigen Medien stellt kein rechtlich bindendes Angebot dar.</p>
+<p>Ein Beherbergungsvertrag kommt erst zustande, wenn:</p>
+<ul><li>die Buchung durch den Gast erfolgt und</li><li>SH Holidays &amp; Health Ltd. die Buchung schriftlich oder elektronisch bestätigt.</li></ul>
 
-        <section class="card" id="ruhe">
-          <h2>2. Ruhezeiten</h2>
-          <p><strong>Nachtruhe:</strong> 22:00–08:00 Uhr</p>
-          <p>Während dieser Zeiten sind laute Musik, Feiern sowie störende Aktivitäten zu vermeiden.</p>
-        </section>
+<h2>3. Leistungen</h2>
+<p>SH Holidays &amp; Health Ltd. vermietet Ferienwohnungen und Unterkünfte zur vorübergehenden Beherbergung.</p>
+<p>Der Umfang der gebuchten Leistungen ergibt sich ausschließlich aus:</p>
+<ul><li>der Buchungsbestätigung,</li><li>der jeweiligen Objektbeschreibung,</li><li>sowie eventuell zusätzlich schriftlich vereinbarten Leistungen.</li></ul>
 
-        <section class="card" id="apartments">
-          <h2>3. Nutzung der Apartments</h2>
-          <p>Die Apartments dürfen ausschließlich durch die angemeldeten Gäste genutzt werden. Nicht angemeldete Übernachtungsgäste bedürfen der vorherigen Zustimmung.</p>
-          <p>Bitte behandeln Sie Möbel, Ausstattung, technische Geräte, Fenster und Terrassen sorgfältig.</p>
-        </section>
+<h2>4. Preise und Zahlungsbedingungen</h2>
+<p>Es gelten die zum Zeitpunkt der Buchung vereinbarten Preise.</p>
+<p><strong>Zahlungsbedingungen:</strong></p>
+<ul><li>Eine Anzahlung in Höhe von 50&nbsp;% des Gesamtpreises ist innerhalb von 7 Tagen nach Buchungsbestätigung fällig.</li><li>Der Restbetrag ist spätestens 30 Tage vor Anreise vollständig zu bezahlen.</li><li>Bei kurzfristigen Buchungen kann der Gesamtbetrag sofort fällig sein.</li></ul>
+<p>Erfolgt die Zahlung nicht fristgerecht, ist SH Holidays &amp; Health Ltd. berechtigt, die Reservierung nach vorheriger Mahnung zu stornieren.</p>
 
-        <section class="card">
-          <h2>4. Gemeinschaftsflächen</h2>
-          <p>Treppenhaus, Wege, Außenbereiche und sonstige Gemeinschaftsflächen dürfen nicht blockiert oder dauerhaft zur Lagerung genutzt werden.</p>
-          <p>Bitte hinterlassen Sie diese Bereiche sauber.</p>
-        </section>
+<h2>5. Anreise und Abreise</h2>
+<p>Soweit nichts anderes vereinbart wurde:</p>
+<ul><li>Check-in: ab 16:00 Uhr</li><li>Check-out: bis 10:00 Uhr</li></ul>
+<p>Der Gast ist verpflichtet, die Unterkunft pfleglich zu behandeln.</p>
 
-        <section class="card" id="pool">
-          <h2>5. Poolbereich</h2>
-          <p>Der Pool dient ausschließlich der Erholung.</p>
-          <ul>
-            <li>Nutzung auf eigene Verantwortung</li>
-            <li>Kinder nur unter Aufsicht Erwachsener</li>
-            <li>keine Glasbehälter am Pool</li>
-            <li>keine Sprünge oder gefährliche Nutzung</li>
-            <li>Duschen vor Nutzung erwünscht</li>
-          </ul>
-          <p>Bitte halten Sie den Poolbereich sauber.</p>
-        </section>
+<h2>6. Stornierungsbedingungen</h2>
+<p><strong>Kostenfreie Stornierung:</strong> Eine kostenfreie Stornierung ist bis 30 Tage vor Anreise möglich.</p>
+<p>Danach gelten folgende Stornokosten:</p>
+<ul><li>29 bis 14 Tage vor Anreise: 50&nbsp;% des Gesamtpreises</li><li>ab 13 Tage vor Anreise oder bei Nichtanreise: 100&nbsp;% des Gesamtpreises</li></ul>
+<p>SH Holidays &amp; Health Ltd. empfiehlt den Abschluss einer Reiserücktrittsversicherung.</p>
 
-        <section class="card" id="balkon">
-          <h2>6. Terrasse / Balkon</h2>
-          <ul>
-            <li>keine Gegenstände über Geländer werfen</li>
-            <li>keine Wäsche sichtbar über Geländern trocknen</li>
-            <li>keine offenen Feuer oder Grillgeräte verwenden (außer ausdrücklich erlaubt)</li>
-          </ul>
-        </section>
+<h2>7. Umbuchungen und Apartmentwechsel</h2>
+<p>SH Holidays &amp; Health Ltd. ist berechtigt, dem Gast aus organisatorischen oder technischen Gründen eine gleichwertige Unterkunft derselben Kategorie zur Verfügung zu stellen, sofern dies für den Gast zumutbar ist.</p>
 
-        <section class="card" id="sauberkeit">
-          <h2>7. Müll und Sauberkeit</h2>
-          <p>Bitte entsorgen Sie Abfälle ausschließlich in die vorgesehenen Behälter, die Sie oben an der Hauptstraße finden.</p>
-        </section>
+<h2>8. Haftung</h2>
+<p>SH Holidays &amp; Health Ltd. haftet unbeschränkt:</p>
+<ul><li>bei Vorsatz,</li><li>grober Fahrlässigkeit,</li><li>sowie bei Schäden aus der Verletzung von Leben, Körper oder Gesundheit.</li></ul>
+<p>Für einfache Fahrlässigkeit haftet SH Holidays &amp; Health Ltd. nur bei Verletzung wesentlicher Vertragspflichten und beschränkt auf den vorhersehbaren, vertragstypischen Schaden.</p>
+<p>Die Haftung für persönliche Gegenstände des Gastes ist ausgeschlossen, soweit gesetzlich zulässig.</p>
 
-        <section class="card" id="rauchen">
-          <h2>8. Rauchen</h2>
-          <p>Rauchen ist in den Apartments nicht gestattet.</p>
-          <p>Rauchen ist ausschließlich in den hierfür vorgesehenen Außenbereichen erlaubt. Zigarettenreste bitte ordnungsgemäß entsorgen.</p>
-        </section>
+<h2>9. Schäden durch Gäste</h2>
+<p>Der Gast haftet für sämtliche Schäden, die durch ihn selbst, Mitreisende oder Besucher schuldhaft verursacht werden.</p>
+<p>Festgestellte Schäden oder Mängel sind unverzüglich mitzuteilen.</p>
 
-        <section class="card" id="tiere">
-          <h2>9. Tiere</h2>
-          <p>Haustiere sind nur nach vorheriger schriftlicher Zustimmung erlaubt. Der Tierhalter haftet für sämtliche Schäden und Verunreinigungen.</p>
-        </section>
+<h2>10. Datenschutz</h2>
+<p>Personenbezogene Daten werden ausschließlich im Rahmen der geltenden Datenschutzbestimmungen verarbeitet.</p>
+<p>Eine Weitergabe an Dritte erfolgt nur, soweit dies:</p>
+<ul><li>zur Vertragsdurchführung erforderlich,</li><li>gesetzlich vorgeschrieben</li><li>oder ausdrücklich vereinbart ist.</li></ul>
 
-        <section class="card" id="sicherheit">
-          <h2>10. Sicherheit</h2>
-          <ul>
-            <li>Fenster und Türen beim Verlassen schließen</li>
-            <li>Klimaanlagen ausschalten</li>
-            <li>Schlüssel sorgfältig verwahren</li>
-          </ul>
-          <p>Für Verlust persönlicher Gegenstände wird keine Haftung übernommen.</p>
-        </section>
+<h2>11. Höhere Gewalt</h2>
+<p>SH Holidays &amp; Health Ltd. haftet nicht für Leistungsstörungen, die durch höhere Gewalt verursacht werden, insbesondere:</p>
+<ul><li>Naturereignisse,</li><li>Strom- oder Internetausfälle,</li><li>behördliche Maßnahmen,</li><li>Pandemien,</li><li>Krieg oder vergleichbare Ereignisse.</li></ul>
 
-        <section class="card">
-          <h2>11. Schäden und Mängel</h2>
-          <p>Bitte melden Sie Schäden oder technische Probleme umgehend. Nur so können wir schnell helfen.</p>
-        </section>
+<h2>12. Gerichtsstand und anwendbares Recht</h2>
+<p>Es gilt das Recht der Republik Bulgarien unter Berücksichtigung zwingender Verbraucherschutzvorschriften des Staates, in dem der Gast seinen gewöhnlichen Aufenthalt hat.</p>
+<p>Gerichtsstand, soweit gesetzlich zulässig, ist Burgas/Bulgarien.</p>
 
-        <section class="card">
-          <h2>12. Besucher</h2>
-          <p>Besucher sind willkommen. Bitte beachten Sie:</p>
-          <ul>
-            <li>keine Übernachtung ohne Anmeldung</li>
-            <li>Rücksicht auf andere Gäste</li>
-          </ul>
-        </section>
+<h2>13. Schlussbestimmungen</h2>
+<p>Sollten einzelne Bestimmungen dieser AGB ganz oder teilweise unwirksam sein oder werden, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.</p>
 
-        <section class="card" id="abreise">
-          <h2>13. Abreise</h2>
-          <ul>
-            <li>Apartment besenrein verlassen</li>
-            <li>Müll entsorgen</li>
-            <li>Klimaanlagen ausstellen</li>
-            <li>Schlüssel wie vereinbart zurückgeben</li>
-            <li>persönliche Gegenstände mitnehmen</li>
-          </ul>
-        </section>
+<h2>Verbraucherstreitbeilegung</h2>
+<p>SH Holidays &amp; Health Ltd. ist nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
 
-        <section class="card">
-          <h2>14. Besondere Hinweise</h2>
-          <p>Die Hausverwaltung ist berechtigt, bei schwerwiegenden oder wiederholten Verstößen angemessene Maßnahmen zu ergreifen.</p>
-          <p>Unser Ziel ist kein Eingreifen – sondern ein angenehmes Miteinander.</p>
-        </section>
-
-        <section class="card full">
-          <h2>Vielen Dank für Ihre Rücksichtnahme</h2>
-          <p class="muted">Wir wünschen Ihnen wunderschöne Tage in Sozopol und einen erholsamen Aufenthalt am Meer.</p>
-        </section>
-      </div>
-    </div>
-  </main>
-
-  <footer class="footer">
-    <div class="wrap">
-      <div class="footer-card">
-        <strong>SH Holidays Ltd.</strong>
-        <p>Wohnanlage SH Holidays Ltd. – Sozopol</p>
-        <p>Kalfata 38, 8130 Sozopol, Bulgarien</p>
-        <p>anno Domini 2026</p>
-      </div>
-    </div>
-  </footer>
+<div class="company"><p><strong>SH Holidays &amp; Health Ltd.</strong><br>Kalfata 38, 8130 Sozopol, Bulgarien</p></div>
+<a class="back" href="https://www.sh-holidays.com/">Zurück zu SH Holidays</a>
+</section>
+</main>
+<footer>© 2026 SH Holidays &amp; Health Ltd. · Alle Rechte vorbehalten.</footer>
 </body>
 </html>
